@@ -33,7 +33,7 @@ prompt APPLICATION 264842 - MOCK PORTFOLIO
 -- Application Export:
 --   Application:     264842
 --   Name:            MOCK PORTFOLIO
---   Date and Time:   10:50 Saturday June 21, 2025
+--   Date and Time:   05:10 Sunday June 29, 2025
 --   Exported By:     JUSTINEBERANGO@GMAIL.COM
 --   Flashback:       0
 --   Export Type:     Application Export
@@ -104,7 +104,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_value_01=>'MOCK PORTFOLIO'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>29
-,p_version_scn=>15633969380194
+,p_version_scn=>15635903986207
 ,p_print_server_type=>'INSTANCE'
 ,p_file_storage=>'DB'
 ,p_is_pwa=>'Y'
@@ -15318,7 +15318,9 @@ wwv_flow_imp_page.create_page(
 '    display: none;',
 '}',
 '',
-'@media(max-width: 700px)',
+'/* TABLET VIEW */',
+'',
+'@media screen and (max-width: 700px)',
 '{',
 '    .text-box h1',
 '    {',
@@ -15358,6 +15360,47 @@ wwv_flow_imp_page.create_page(
 '    }',
 '}',
 '',
+'/* TABLET VIEW */',
+'',
+'@media (max-width: 480px)',
+'{',
+'    .text-box h1',
+'    {',
+'        font-size: 20px;',
+'    }',
+' ',
+'    .nav-links ul li ',
+'    {',
+'        display: flex;',
+'    }',
+'',
+'    .nav-links',
+'    {',
+'        position: absolute;',
+'        background: #7e7e7e;',
+'        height: 100vh;',
+'        width: 200px;',
+'        top: 0;',
+'        right: -200px;',
+'        text-align: left;',
+'        z-index: 2;',
+'        transition: 1s;',
+'    }',
+'',
+'    nav .fa ',
+'    {',
+'        display: block;',
+'        color: #ffffff;',
+'        margin: 10px;',
+'        font-size: 22px;',
+'        cursor: pointer;',
+'    }',
+'',
+'    .nav-links ul',
+'    {',
+'        padding: 30px;',
+'    }',
+'}',
 '/*------- about me ----- */',
 '',
 '.aboutme-intro',
